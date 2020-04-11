@@ -8,9 +8,18 @@ def square(side_len):
 
 
 # square(100)
+from random import randint
+for i in range(100):
 
-for i in range(50):
-    square(10 + i)
+    r = randint(0,255) #makes variables r,g,b whose value is an integer,
+    g = randint(0,255) # which is between 0 and 255. It is random, and
+    b = randint(0,255) # changes every time the loop runs
+
+    colormode(255) # set the color mode to rgb
+    pencolor(r,g,b) # changes the color of the pen to the rgb coordinates
+                    # obtained by the variables r, g, b changing each time
+    pencolor('red')                
+    square(10 + i*5)
     right(5)
 
 
